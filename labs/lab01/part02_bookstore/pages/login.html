@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About Us</title>
+    <title>Login</title>
 </head>
 <body style="font-family: Arial, sans-serif; text-align: center; background-color: #f4f4f4;">
     <nav style="background: #333; padding: 10px;">
@@ -13,9 +13,13 @@
         <a href="login" style="color: white; margin: 10px; text-decoration: none;">Login</a>
         <a href="register" style="color: white; margin: 10px; text-decoration: none;">Register</a>
     </nav>
-    <div style="margin: 20px auto; padding: 20px; background: white; display: inline-block; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-        <h1 style="color: #333;">About Us</h1>
-        <p>Learn more about our bookstore.</p>
-    </div>
+    <form style="margin: 20px auto; padding: 20px; background: white; display: inline-block; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        <h1 style="color: #333;">Login</h1>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br>
+        <button type="submit" style="background-color: #333; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer;">Login</button>
+    </form>
 </body>
 </html>
