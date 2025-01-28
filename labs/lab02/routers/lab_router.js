@@ -42,7 +42,7 @@ router.get("/calculate/:a/:b/:operation", (req, res) => {
         case "/": // we have to send this %2F as parameter
             if( b == 0){
                 res.send("You trying to divide by 0, maybe don't do that")
-                break;
+                return;
             }else{
             result = a / b}
             break;  
