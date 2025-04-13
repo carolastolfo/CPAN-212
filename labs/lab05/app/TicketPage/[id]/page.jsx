@@ -13,15 +13,13 @@ const getTicketById = async (id) => {
 };
 
 const TicketPage = async ({ params }) => {
-  const id = params.id;
-  const EDITMODE = id !== "new";
+  const EDITMODE = params.id === "new" ? false : true;
 
   let updateTicketData = {};
 
   if (EDITMODE) {
     updateTicketData = await getTicketById(params.id);
     updateTicketData = updateTicketData.foundTicket;
-    console.log("update ticket data", updateTicketData);
   } else {
     updateTicketData = {
       _id: "new",
@@ -30,7 +28,5 @@ const TicketPage = async ({ params }) => {
 
   return <TicketForm ticket={updateTicketData} />;
 };
-
-export const dynamic = "force-dynamic";
 
 export default TicketPage;
