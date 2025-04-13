@@ -6,6 +6,8 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 
 config.autoAddCss = false;
 
+export const dynamicParams = true;
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
